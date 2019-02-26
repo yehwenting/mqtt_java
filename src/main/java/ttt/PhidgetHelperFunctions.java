@@ -377,10 +377,14 @@ public class PhidgetHelperFunctions {
 	}
 
 	static void AskForDeviceParameters(ChannelInfo channelInfo, Phidget ch) throws PhidgetException {
-		DisplayLocatePhidgetsLink();
-		InputSerialNumber(channelInfo);
-		InputVINTProperties(channelInfo, ch);
+//		DisplayLocatePhidgetsLink();
+//		InputSerialNumber(channelInfo);
+		channelInfo.deviceSerialNumber = -1;
+//		InputVINTProperties(channelInfo, ch);
+		channelInfo.isVINT = false;
 		InputChannel(channelInfo);
-		SetupNetwork(channelInfo);
+//		SetupNetwork(channelInfo);
+		channelInfo.netInfo.isRemote = false;
+		
 	}
 }
