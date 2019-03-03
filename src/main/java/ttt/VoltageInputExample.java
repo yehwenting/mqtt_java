@@ -26,7 +26,7 @@ public class VoltageInputExample {
 		VoltageInput ch1 = new VoltageInput();
 		
 		// MQTT
-		final MqttClient client = new MqttClient("tcp://iot.eclipse.org:1883", MqttClient.generateClientId());
+		final MqttClient client = new MqttClient("tcp://140.119.163.195:1883", MqttClient.generateClientId());
 		client.connect();
     	System.out.println("Connected");
     	final MqttMessage message = new MqttMessage();
@@ -73,7 +73,7 @@ public class VoltageInputExample {
 					*	DataInterval can be set to any value from MinDataInterval to MaxDataInterval.
 					*/
 					System.out.print("\tSetting DataInterval to 256ms\n");
-					ph.setDataInterval(1000);
+					ph.setDataInterval(10);
 //					System.out.println("iiiiiiiii"+ph.getMinDataInterval());
 
 					/*
